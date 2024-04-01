@@ -1,0 +1,49 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.flex-container{
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 100px;
+    /* min-width: 350px; */
+
+    /* flex-basis should behave the same as min-width */
+    /* except it will continue to shrink even if window is less than specified value */
+    /* Because of this it is more desirable than min-width in most cases*/
+    flex-basis: 350px; /* applies to all flex itmes */
+    
+    /* short hand for flex grow, shrink and basics */
+    /* first value is grow, second is shrink, third is basis */
+    /* flex: 1 0 350px; */
+}
+
+.one{
+    background: red;
+    flex-basis: 510px;
+}
+
+.two{
+    background: blue;
+    flex-basis: 200px;
+}
+
+.three{
+    background: green;
+    flex-basis: 100px;
+}

@@ -1,0 +1,47 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.flex-container{
+    display: flex;
+    background-color: white;
+}
+
+.box {
+    height: 100px;
+    /* for testing flex-grow */
+    /* min-width: 100px; */
+    
+    /* for testing flex-shrink */
+    /* !!! flex-shrink is not used very often !!! */
+    width: 500px;
+}
+
+.one{
+    background: red;
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+}
+
+.two{
+    background: blue;
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+}
+
+.three{
+    background: green;
+    /* flex-grow: 3; */
+    flex-shrink: 3;
+}

@@ -1,0 +1,130 @@
+*{
+  font-family: verdana;
+  margin: 0;
+}
+ 
+body{
+  background: #eee;
+  color: #333;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* menu base styles */
+
+nav{
+  background: #333;
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding: 10px;
+}
+
+nav a:hover{
+  background-color: #555;
+}
+
+/* social menu base styles */
+
+a.tw{
+  background: url(img/tw.png) no-repeat center;
+  background-size: 80%;
+    
+}
+
+a.fb{
+  background: url(img/fb.png) no-repeat center;
+  background-size: 80%;
+}
+
+.social a{
+  text-indent: -10000px;
+  margin: 0 auto;
+}
+
+.social{
+  max-width: 80px;
+  margin: 0 auto; /* do at end */
+}
+
+/* Tutorial #11 */
+/* grid vs flex base styles */
+
+#blocks {  /* add margins around section defined by id=blocks */
+  margin: 20px;
+}
+
+article {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box; /* include padding as part of overall width */
+}
+
+article h2 {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0; /* top and bottom 10px, left and right 0 */
+}
+/* flex styles */
+
+nav ul.social li{
+  flex: 1 1 0;
+}
+
+nav ul.social{
+  flex: 1 1 0;
+  display: flex;
+}
+
+/* For large screen sizes */
+@media screen and (min-width: 768px){
+
+nav ul{
+  display: flex;
+}
+
+nav li{
+  flex: 1 1 0;
+}
+    
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+  
+ul.social{
+  margin: 0;
+}
+
+#blocks{
+  display: flex;
+  flex-wrap: wrap; /* allow articles to wrap when its > 32% width */
+  justify-content: space-between;  /* separate out article columns */
+}
+
+article {
+  flex: 0 1 32%; /* 0 growth, 1 shrink, 32% width (3 columns)*/
+  transition: flex-basis 0.3s linear; /* animation */
+}
+
+/* user control grid vs flex */
+article.stack {
+  flex: 0 1 100%; /* 0 growth, 1 shrink, 100% width (1 column)*/
+}
+    
+} /* end media 768 */
+
